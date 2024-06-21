@@ -1,43 +1,28 @@
-from typing import Literal
-
 import pytest
 from clipstick import parse
-from pydantic import BaseModel
+
+from tests.models.pydantic_models import ModelWithChoice
 
 
-class ModelWithChoice(BaseModel):
-    choice: Literal["option1", "option2"]
-
-
-class ModelWithOptionalChoice(BaseModel):
-    choice: Literal["option1", "option2"] = "option1"
-    """A choice with a default."""
-
-
-class ModelWithOptionalIntChoice(BaseModel):
-    choice: Literal[1, 2] = 1
-    """A choice with a default."""
-
-
-class ModelWithOptionalNoneChoice(BaseModel):
-    choice: Literal["option1", "option2"] | None = None
-    """A choice with a default."""
-
-
-def test_choice():
-    model = parse(ModelWithChoice, ["option1"])
+def test_choice(models):
+    model = parse(models.ModelWithChoice, ["option1"])
 
     assert model.choice == "option1"
 
 
-def test_optional_choice():
-    model = parse(ModelWithOptionalChoice, ["--choice", "option2"])
+def test_optional_choice(models):
+    model = parse(models.ModelWithOptionalChoice, ["--choice", "option2"])
     assert model.choice == "option2"
 
 
-def test_optional_none_choice():
-    model = parse(ModelWithOptionalNoneChoice, ["--choice", "option2"])
+def test_optional_none_choice(models):
+    model = parse(models.ModelWithOptionalNoneChoice, ["--choice", "option2"])
     assert model.choice == "option2"
+
+
+def test_invalid_choice(models):
+    with pytest.raises(SystemExit):
+        parse(models.ModelWithChoice, ["InvalidOption"])
 
 
 def test_choice_help(capture_output):

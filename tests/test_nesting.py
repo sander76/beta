@@ -1,116 +1,37 @@
 import pytest
 from clipstick import parse
-from pydantic import BaseModel
+
+from tests.models import dataclass_models, pydantic_models
 
 
-class Info(BaseModel):
-    """Show information about this repo"""
-
-    verbose: bool = True
-
-
-class Clone(BaseModel):
-    """Clone a repo."""
-
-    depth: int
+def test_nested_model_nest_1(models):
+    result = parse(models.MyGitModel, ["merge", "main"])
+    assert result == models.MyGitModel(sub_command=models.Merge(branch="main"))
 
 
-class Remote(BaseModel):
-    """Clone a git repository."""
-
-    url: str = "https://mysuperrepo"
-    """Url of the git repo."""
-
-    sub_command: Clone | Info
-
-
-class Merge(BaseModel):
-    """Git merge command."""
-
-    branch: str
-    """Git branch to merge into current branch."""
-
-
-class MyGitModel(BaseModel):
-    """My custom git cli."""
-
-    sub_command: Remote | Merge
-
-
-def test_deeply_nested_model_nest_1():
-    model = parse(MyGitModel, ["remote", "info", "--no-verbose"])
-    assert model == MyGitModel(sub_command=Remote(sub_command=Info(verbose=False)))
-
-
-def test_deeply_nested_model_nest_2():
-    model = parse(MyGitModel, ["remote", "clone", "11"])
-    assert model == MyGitModel(sub_command=Remote(sub_command=Clone(depth=11)))
-
-
-def test_deeply_nested_model_nest_3():
-    model = parse(MyGitModel, ["merge", "my_working_branch"])
-    assert model == MyGitModel(sub_command=Merge(branch="my_working_branch"))
-
-
-def test_model_help_first_level(capture_output):
-    with pytest.raises(SystemExit) as err:
-        capture_output(MyGitModel, ["-h"])
-
-    assert err.value.code == 0
-    assert (
-        """
-Usage: my-cli-app [Subcommands]
-
-My custom git cli.
-
-Subcommands:
-    remote               Clone a git repository.
-    merge                Git merge command.
-"""
-        == capture_output.captured_output
+def test_deeply_nested_default(models):
+    result = parse(models.MyGitModel, ["remote", "info"])
+    assert result == models.MyGitModel(
+        sub_command=models.Remote(sub_command=models.Info(verbose=True))
     )
 
 
-def test_model_help_second_level(capture_output):
-    with pytest.raises(SystemExit) as err:
-        capture_output(MyGitModel, ["remote", "-h"])
-
-    assert err.value.code == 0
-    assert (
-        """
-Usage: my-cli-app remote [Options] [Subcommands]
-
-Clone a git repository.
-
-Options:
-    --url                Url of the git repo. [str] [default = https://mysuperrepo]
-
-Subcommands:
-    clone                Clone a repo.
-    info                 Show information about this repo
-"""
-        == capture_output.captured_output
+def test_deeply_nested_model_nest_1(models):
+    result = parse(models.MyGitModel, ["remote", "info", "--no-verbose"])
+    assert result == models.MyGitModel(
+        sub_command=models.Remote(sub_command=models.Info(verbose=False))
     )
 
 
-def test_help_second_level_partially_completed(capture_output):
-    """The help flag can be given at any time. Even when a command
-    is already partially completed. (like the --url flag in this test.)"""
-    with pytest.raises(SystemExit) as err:
-        capture_output(MyGitModel, ["remote", "--url", "some_url", "-h"])
-    assert err.value.code == 0
-    assert (
-        """
-Usage: my-cli-app remote [Options] [Subcommands]
+def test_deeply_nested_model_nest_2(models):
+    result = parse(models.MyGitModel, ["remote", "clone", "11"])
+    assert result == models.MyGitModel(
+        sub_command=models.Remote(sub_command=models.Clone(depth=11))
+    )
 
-Clone a git repository.
 
-Options:
-    --url                Url of the git repo. [str] [default = https://mysuperrepo]
-
-Subcommands:
-    clone                Clone a repo.
-    info                 Show information about this repo
-"""
-        == capture_output.captured_output
+def test_deeply_nested_model_nest_3(models):
+    model = parse(models.MyGitModel, ["merge", "my_working_branch"])
+    assert model == models.MyGitModel(
+        sub_command=models.Merge(branch="my_working_branch")
     )

@@ -2,18 +2,25 @@ import pytest
 from clipstick._clipstick import parse
 from pydantic import BaseModel
 
-
-class FlagDefaultFalse(BaseModel):
-    """A model with flag."""
-
-    proceed: bool = False
-    """continue with this operation."""
+from tests.models import dataclass_models, pydantic_models
 
 
-def test_default_false_model():
-    model = parse(FlagDefaultFalse, ["--proceed"])
+@pytest.mark.parametrize(
+    "model", [pydantic_models.FlagDefaultFalse, dataclass_models.FlagDefaultFalse]
+)
+def test_default_false_model(model):
+    result = parse(model, ["--proceed"])
 
-    assert model == FlagDefaultFalse(proceed=True)
+    assert result == model(proceed=True)
+
+
+@pytest.mark.parametrize(
+    "model", [pydantic_models.FlagDefaultFalse, dataclass_models.FlagDefaultFalse]
+)
+def test_default_false_model_no_args(model):
+    result = parse(model, [])
+
+    assert result == model()
 
 
 def test_help(capture_output):

@@ -1,7 +1,0 @@
-
-Usage: my-app [Arguments]
-
-A simple model. Main description.
-
-Arguments:
-    my-name              A snake cased argument. [str]

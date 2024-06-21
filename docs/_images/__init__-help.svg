@@ -1,4 +1,4 @@
-<svg class="rich-terminal" viewBox="0 0 1116 147.6" xmlns="http://www.w3.org/2000/svg">
+<svg class="rich-terminal" viewBox="0 0 1116 245.2" xmlns="http://www.w3.org/2000/svg">
     <!-- Generated with Rich https://www.textualize.io -->
     <style>
 
@@ -38,7 +38,7 @@
 
     <defs>
     <clipPath id="abcdefg-clip-terminal">
-      <rect x="0" y="0" width="1097.0" height="96.6" />
+      <rect x="0" y="0" width="1097.0" height="194.2" />
     </clipPath>
     <clipPath id="abcdefg-line-0">
     <rect x="0" y="1.5" width="1098" height="24.65"/>
@@ -49,9 +49,21 @@
 <clipPath id="abcdefg-line-2">
     <rect x="0" y="50.3" width="1098" height="24.65"/>
             </clipPath>
+<clipPath id="abcdefg-line-3">
+    <rect x="0" y="74.7" width="1098" height="24.65"/>
+            </clipPath>
+<clipPath id="abcdefg-line-4">
+    <rect x="0" y="99.1" width="1098" height="24.65"/>
+            </clipPath>
+<clipPath id="abcdefg-line-5">
+    <rect x="0" y="123.5" width="1098" height="24.65"/>
+            </clipPath>
+<clipPath id="abcdefg-line-6">
+    <rect x="0" y="147.9" width="1098" height="24.65"/>
+            </clipPath>
     </defs>
 
-    <rect fill="#292929" stroke="rgba(255,255,255,0.35)" stroke-width="1" x="1" y="1" width="1114" height="145.6" rx="8"/>
+    <rect fill="#292929" stroke="rgba(255,255,255,0.35)" stroke-width="1" x="1" y="1" width="1114" height="243.2" rx="8"/>
             <g transform="translate(26,22)">
             <circle cx="0" cy="0" r="7" fill="#ff5f57"/>
             <circle cx="22" cy="0" r="7" fill="#febc2e"/>
@@ -64,7 +76,11 @@
     <text class="abcdefg-r1" x="1098" y="20" textLength="12.2" clip-path="url(#abcdefg-line-0)">
 </text><text class="abcdefg-r2" x="0" y="44.4" textLength="24.4" clip-path="url(#abcdefg-line-1)">➜&#160;</text><text class="abcdefg-r1" x="24.4" y="44.4" textLength="366" clip-path="url(#abcdefg-line-1)">python&#160;examples/__init__.py&#160;-h</text><text class="abcdefg-r1" x="1098" y="44.4" textLength="12.2" clip-path="url(#abcdefg-line-1)">
 </text><text class="abcdefg-r1" x="1098" y="68.8" textLength="12.2" clip-path="url(#abcdefg-line-2)">
-</text><text class="abcdefg-r1" x="1098" y="93.2" textLength="12.2" clip-path="url(#abcdefg-line-3)">
+</text><text class="abcdefg-r1" x="0" y="93.2" textLength="976" clip-path="url(#abcdefg-line-3)">0.00s&#160;-&#160;Debugger&#160;warning:&#160;It&#160;seems&#160;that&#160;frozen&#160;modules&#160;are&#160;being&#160;used,&#160;which&#160;may</text><text class="abcdefg-r1" x="1098" y="93.2" textLength="12.2" clip-path="url(#abcdefg-line-3)">
+</text><text class="abcdefg-r1" x="0" y="117.6" textLength="927.2" clip-path="url(#abcdefg-line-4)">0.00s&#160;-&#160;make&#160;the&#160;debugger&#160;miss&#160;breakpoints.&#160;Please&#160;pass&#160;-Xfrozen_modules=off</text><text class="abcdefg-r1" x="1098" y="117.6" textLength="12.2" clip-path="url(#abcdefg-line-4)">
+</text><text class="abcdefg-r1" x="0" y="142" textLength="536.8" clip-path="url(#abcdefg-line-5)">0.00s&#160;-&#160;to&#160;python&#160;to&#160;disable&#160;frozen&#160;modules.</text><text class="abcdefg-r1" x="1098" y="142" textLength="12.2" clip-path="url(#abcdefg-line-5)">
+</text><text class="abcdefg-r1" x="0" y="166.4" textLength="1098" clip-path="url(#abcdefg-line-6)">0.00s&#160;-&#160;Note:&#160;Debugging&#160;will&#160;proceed.&#160;Set&#160;PYDEVD_DISABLE_FILE_VALIDATION=1&#160;to&#160;disable&#160;this</text><text class="abcdefg-r1" x="1098" y="166.4" textLength="12.2" clip-path="url(#abcdefg-line-6)">
+</text><text class="abcdefg-r1" x="0" y="190.8" textLength="134.2" clip-path="url(#abcdefg-line-7)">validation.</text><text class="abcdefg-r1" x="1098" y="190.8" textLength="12.2" clip-path="url(#abcdefg-line-7)">
 </text>
     </g>
     </g>

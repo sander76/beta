@@ -1,4 +1,4 @@
-<svg class="rich-terminal" viewBox="0 0 1116 416.0" xmlns="http://www.w3.org/2000/svg">
+<svg class="rich-terminal" viewBox="0 0 1116 611.1999999999999" xmlns="http://www.w3.org/2000/svg">
     <!-- Generated with Rich https://www.textualize.io -->
     <style>
 
@@ -34,13 +34,11 @@
 
     .abcdefg-r1 { fill: #c5c8c6 }
 .abcdefg-r2 { fill: #98a84b }
-.abcdefg-r3 { fill: #c5c8c6;font-weight: bold }
-.abcdefg-r4 { fill: #d78700 }
     </style>
 
     <defs>
     <clipPath id="abcdefg-clip-terminal">
-      <rect x="0" y="0" width="1097.0" height="365.0" />
+      <rect x="0" y="0" width="1097.0" height="560.1999999999999" />
     </clipPath>
     <clipPath id="abcdefg-line-0">
     <rect x="0" y="1.5" width="1098" height="24.65"/>
@@ -84,9 +82,33 @@
 <clipPath id="abcdefg-line-13">
     <rect x="0" y="318.7" width="1098" height="24.65"/>
             </clipPath>
+<clipPath id="abcdefg-line-14">
+    <rect x="0" y="343.1" width="1098" height="24.65"/>
+            </clipPath>
+<clipPath id="abcdefg-line-15">
+    <rect x="0" y="367.5" width="1098" height="24.65"/>
+            </clipPath>
+<clipPath id="abcdefg-line-16">
+    <rect x="0" y="391.9" width="1098" height="24.65"/>
+            </clipPath>
+<clipPath id="abcdefg-line-17">
+    <rect x="0" y="416.3" width="1098" height="24.65"/>
+            </clipPath>
+<clipPath id="abcdefg-line-18">
+    <rect x="0" y="440.7" width="1098" height="24.65"/>
+            </clipPath>
+<clipPath id="abcdefg-line-19">
+    <rect x="0" y="465.1" width="1098" height="24.65"/>
+            </clipPath>
+<clipPath id="abcdefg-line-20">
+    <rect x="0" y="489.5" width="1098" height="24.65"/>
+            </clipPath>
+<clipPath id="abcdefg-line-21">
+    <rect x="0" y="513.9" width="1098" height="24.65"/>
+            </clipPath>
     </defs>
 
-    <rect fill="#292929" stroke="rgba(255,255,255,0.35)" stroke-width="1" x="1" y="1" width="1114" height="414" rx="8"/>
+    <rect fill="#292929" stroke="rgba(255,255,255,0.35)" stroke-width="1" x="1" y="1" width="1114" height="609.2" rx="8"/>
             <g transform="translate(26,22)">
             <circle cx="0" cy="0" r="7" fill="#ff5f57"/>
             <circle cx="22" cy="0" r="7" fill="#febc2e"/>
@@ -99,18 +121,26 @@
     <text class="abcdefg-r1" x="1098" y="20" textLength="12.2" clip-path="url(#abcdefg-line-0)">
 </text><text class="abcdefg-r2" x="0" y="44.4" textLength="24.4" clip-path="url(#abcdefg-line-1)">➜&#160;</text><text class="abcdefg-r1" x="24.4" y="44.4" textLength="353.8" clip-path="url(#abcdefg-line-1)">python&#160;examples/boolean.py&#160;-h</text><text class="abcdefg-r1" x="1098" y="44.4" textLength="12.2" clip-path="url(#abcdefg-line-1)">
 </text><text class="abcdefg-r1" x="1098" y="68.8" textLength="12.2" clip-path="url(#abcdefg-line-2)">
-</text><text class="abcdefg-r1" x="1098" y="93.2" textLength="12.2" clip-path="url(#abcdefg-line-3)">
-</text><text class="abcdefg-r3" x="0" y="117.6" textLength="85.4" clip-path="url(#abcdefg-line-4)">Usage:&#160;</text><text class="abcdefg-r1" x="85.4" y="117.6" textLength="390.4" clip-path="url(#abcdefg-line-4)">boolean.py&#160;[Arguments]&#160;[Options]</text><text class="abcdefg-r1" x="1098" y="117.6" textLength="12.2" clip-path="url(#abcdefg-line-4)">
-</text><text class="abcdefg-r1" x="1098" y="142" textLength="12.2" clip-path="url(#abcdefg-line-5)">
-</text><text class="abcdefg-r2" x="0" y="166.4" textLength="231.8" clip-path="url(#abcdefg-line-6)">A&#160;model&#160;with&#160;flags.</text><text class="abcdefg-r1" x="1098" y="166.4" textLength="12.2" clip-path="url(#abcdefg-line-6)">
-</text><text class="abcdefg-r1" x="1098" y="190.8" textLength="12.2" clip-path="url(#abcdefg-line-7)">
-</text><text class="abcdefg-r3" x="0" y="215.2" textLength="122" clip-path="url(#abcdefg-line-8)">Arguments:</text><text class="abcdefg-r1" x="1098" y="215.2" textLength="12.2" clip-path="url(#abcdefg-line-8)">
-</text><text class="abcdefg-r4" x="48.8" y="239.6" textLength="292.8" clip-path="url(#abcdefg-line-9)">--required/--no-required</text><text class="abcdefg-r1" x="341.6" y="239.6" textLength="353.8" clip-path="url(#abcdefg-line-9)">&#160;Some&#160;required&#160;thingy.&#160;[bool]</text><text class="abcdefg-r1" x="1098" y="239.6" textLength="12.2" clip-path="url(#abcdefg-line-9)">
-</text><text class="abcdefg-r4" x="48.8" y="264" textLength="451.4" clip-path="url(#abcdefg-line-10)">-w/-no-w&#160;--with-short/--no-with-short</text><text class="abcdefg-r1" x="500.2" y="264" textLength="402.6" clip-path="url(#abcdefg-line-10)">&#160;required&#160;flag&#160;with&#160;short.&#160;[bool]</text><text class="abcdefg-r1" x="1098" y="264" textLength="12.2" clip-path="url(#abcdefg-line-10)">
-</text><text class="abcdefg-r1" x="1098" y="288.4" textLength="12.2" clip-path="url(#abcdefg-line-11)">
-</text><text class="abcdefg-r3" x="0" y="312.8" textLength="97.6" clip-path="url(#abcdefg-line-12)">Options:</text><text class="abcdefg-r1" x="1098" y="312.8" textLength="12.2" clip-path="url(#abcdefg-line-12)">
-</text><text class="abcdefg-r4" x="48.8" y="337.2" textLength="244" clip-path="url(#abcdefg-line-13)">--no-an-optional&#160;&#160;&#160;&#160;</text><text class="abcdefg-r1" x="292.8" y="337.2" textLength="451.4" clip-path="url(#abcdefg-line-13)">&#160;An&#160;optional.&#160;[bool]&#160;[default&#160;=&#160;True]</text><text class="abcdefg-r1" x="1098" y="337.2" textLength="12.2" clip-path="url(#abcdefg-line-13)">
-</text><text class="abcdefg-r4" x="48.8" y="361.6" textLength="292.8" clip-path="url(#abcdefg-line-14)">-o&#160;--optional-with-short</text><text class="abcdefg-r1" x="341.6" y="361.6" textLength="561.2" clip-path="url(#abcdefg-line-14)">&#160;Optional&#160;with&#160;short.&#160;[bool]&#160;[default&#160;=&#160;False]</text><text class="abcdefg-r1" x="1098" y="361.6" textLength="12.2" clip-path="url(#abcdefg-line-14)">
+</text><text class="abcdefg-r1" x="0" y="93.2" textLength="976" clip-path="url(#abcdefg-line-3)">0.00s&#160;-&#160;Debugger&#160;warning:&#160;It&#160;seems&#160;that&#160;frozen&#160;modules&#160;are&#160;being&#160;used,&#160;which&#160;may</text><text class="abcdefg-r1" x="1098" y="93.2" textLength="12.2" clip-path="url(#abcdefg-line-3)">
+</text><text class="abcdefg-r1" x="0" y="117.6" textLength="927.2" clip-path="url(#abcdefg-line-4)">0.00s&#160;-&#160;make&#160;the&#160;debugger&#160;miss&#160;breakpoints.&#160;Please&#160;pass&#160;-Xfrozen_modules=off</text><text class="abcdefg-r1" x="1098" y="117.6" textLength="12.2" clip-path="url(#abcdefg-line-4)">
+</text><text class="abcdefg-r1" x="0" y="142" textLength="536.8" clip-path="url(#abcdefg-line-5)">0.00s&#160;-&#160;to&#160;python&#160;to&#160;disable&#160;frozen&#160;modules.</text><text class="abcdefg-r1" x="1098" y="142" textLength="12.2" clip-path="url(#abcdefg-line-5)">
+</text><text class="abcdefg-r1" x="0" y="166.4" textLength="1098" clip-path="url(#abcdefg-line-6)">0.00s&#160;-&#160;Note:&#160;Debugging&#160;will&#160;proceed.&#160;Set&#160;PYDEVD_DISABLE_FILE_VALIDATION=1&#160;to&#160;disable&#160;this</text><text class="abcdefg-r1" x="1098" y="166.4" textLength="12.2" clip-path="url(#abcdefg-line-6)">
+</text><text class="abcdefg-r1" x="0" y="190.8" textLength="134.2" clip-path="url(#abcdefg-line-7)">validation.</text><text class="abcdefg-r1" x="1098" y="190.8" textLength="12.2" clip-path="url(#abcdefg-line-7)">
+</text><text class="abcdefg-r1" x="0" y="215.2" textLength="854" clip-path="url(#abcdefg-line-8)">usage:&#160;boolean.py&#160;[-h]&#160;[--required&#160;REQUIRED]&#160;[--with_short&#160;WITH_SHORT]</text><text class="abcdefg-r1" x="1098" y="215.2" textLength="12.2" clip-path="url(#abcdefg-line-8)">
+</text><text class="abcdefg-r1" x="0" y="239.6" textLength="549" clip-path="url(#abcdefg-line-9)">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;[--an_optional&#160;AN_OPTIONAL]</text><text class="abcdefg-r1" x="1098" y="239.6" textLength="12.2" clip-path="url(#abcdefg-line-9)">
+</text><text class="abcdefg-r1" x="0" y="264" textLength="744.2" clip-path="url(#abcdefg-line-10)">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;[--optional_with_short&#160;OPTIONAL_WITH_SHORT]</text><text class="abcdefg-r1" x="1098" y="264" textLength="12.2" clip-path="url(#abcdefg-line-10)">
+</text><text class="abcdefg-r1" x="0" y="288.4" textLength="451.4" clip-path="url(#abcdefg-line-11)">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;required&#160;with_short</text><text class="abcdefg-r1" x="1098" y="288.4" textLength="12.2" clip-path="url(#abcdefg-line-11)">
+</text><text class="abcdefg-r1" x="1098" y="312.8" textLength="12.2" clip-path="url(#abcdefg-line-12)">
+</text><text class="abcdefg-r1" x="0" y="337.2" textLength="256.2" clip-path="url(#abcdefg-line-13)">positional&#160;arguments:</text><text class="abcdefg-r1" x="1098" y="337.2" textLength="12.2" clip-path="url(#abcdefg-line-13)">
+</text><text class="abcdefg-r1" x="0" y="361.6" textLength="122" clip-path="url(#abcdefg-line-14)">&#160;&#160;required</text><text class="abcdefg-r1" x="1098" y="361.6" textLength="12.2" clip-path="url(#abcdefg-line-14)">
+</text><text class="abcdefg-r1" x="0" y="386" textLength="146.4" clip-path="url(#abcdefg-line-15)">&#160;&#160;with_short</text><text class="abcdefg-r1" x="1098" y="386" textLength="12.2" clip-path="url(#abcdefg-line-15)">
+</text><text class="abcdefg-r1" x="1098" y="410.4" textLength="12.2" clip-path="url(#abcdefg-line-16)">
+</text><text class="abcdefg-r1" x="0" y="434.8" textLength="97.6" clip-path="url(#abcdefg-line-17)">options:</text><text class="abcdefg-r1" x="1098" y="434.8" textLength="12.2" clip-path="url(#abcdefg-line-17)">
+</text><text class="abcdefg-r1" x="0" y="459.2" textLength="671" clip-path="url(#abcdefg-line-18)">&#160;&#160;-h,&#160;--help&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;show&#160;this&#160;help&#160;message&#160;and&#160;exit</text><text class="abcdefg-r1" x="1098" y="459.2" textLength="12.2" clip-path="url(#abcdefg-line-18)">
+</text><text class="abcdefg-r1" x="0" y="483.6" textLength="256.2" clip-path="url(#abcdefg-line-19)">&#160;&#160;--required&#160;REQUIRED</text><text class="abcdefg-r1" x="1098" y="483.6" textLength="12.2" clip-path="url(#abcdefg-line-19)">
+</text><text class="abcdefg-r1" x="0" y="508" textLength="305" clip-path="url(#abcdefg-line-20)">&#160;&#160;--with_short&#160;WITH_SHORT</text><text class="abcdefg-r1" x="1098" y="508" textLength="12.2" clip-path="url(#abcdefg-line-20)">
+</text><text class="abcdefg-r1" x="0" y="532.4" textLength="329.4" clip-path="url(#abcdefg-line-21)">&#160;&#160;--an_optional&#160;AN_OPTIONAL</text><text class="abcdefg-r1" x="1098" y="532.4" textLength="12.2" clip-path="url(#abcdefg-line-21)">
+</text><text class="abcdefg-r1" x="0" y="556.8" textLength="524.6" clip-path="url(#abcdefg-line-22)">&#160;&#160;--optional_with_short&#160;OPTIONAL_WITH_SHORT</text><text class="abcdefg-r1" x="1098" y="556.8" textLength="12.2" clip-path="url(#abcdefg-line-22)">
 </text>
     </g>
     </g>

@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import sys
+from dataclasses import dataclass
 from functools import cached_property
 from types import NoneType, UnionType
 from typing import (
@@ -18,7 +19,7 @@ from pydantic.fields import FieldInfo
 from clipstick import _exceptions, _help
 from clipstick._annotations import Short
 
-TPydanticModel = TypeVar("TPydanticModel", bound=BaseModel)
+TPydanticModel = TypeVar("TPydanticModel")
 _HELP_KEYS = ("-h", "--help")
 
 

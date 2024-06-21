@@ -1,10 +1,17 @@
+import dataclasses
 import sys
+from argparse import ArgumentParser, Namespace
+from dataclasses import dataclass, is_dataclass
 from typing import Final
 
+from pydantic import BaseModel
+
 from clipstick import _help
+from clipstick.__intermediary import ArgsModel, materialize
 from clipstick._exceptions import ClipStickError
-from clipstick._parse import tokenize, validate_model
-from clipstick._tokens import Command, TPydanticModel
+from clipstick._parse import validate_model
+from clipstick._tokens import TPydanticModel
+from clipstick.args import to_argparse
 
 DUMMY_ENTRY_POINT: Final[str] = "my-cli-app"
 
@@ -35,26 +42,16 @@ def parse(model: type[TPydanticModel], args: list[str] | None = None) -> TPydant
         # During testing you don't provide that (only the actual arguments you enter after that).
         entry_point = DUMMY_ENTRY_POINT
 
-    root_node = Command(field=entry_point, cls=model, parent=None)
-    try:
-        tokenize(model=model, sub_command=root_node)
-    except ClipStickError as err:
-        _help.error(err)
-        sys.exit(1)
-    try:
-        success, idx = root_node.match(0, args)
-    except ClipStickError as err:
-        _help.error(err)
-        sys.exit(1)
-    if not idx == len(args) or not success:
-        _help.error("Unable to consume all provided arguments.")
-        _help.suggest_help()
-        sys.exit(1)
+    if issubclass(model, BaseModel):
+        args_model = ArgsModel.from_pydantic(model)
+    elif dataclasses.is_dataclass(model):
+        args_model = ArgsModel.from_dataclass(model)
+    else:
+        _help.error("invalid model")
+        sys.exit(3)
+    my_ns = Namespace(__clipstick_target=model)
+    arg_parser = to_argparse(args_model)
 
-    try:
-        parsed = root_node.parse()
-    except ClipStickError as err:
-        _help.error(err)
-        sys.exit(1)
+    ns = arg_parser.parse_args(args, namespace=my_ns)
 
-    return parsed
+    return materialize(ns)

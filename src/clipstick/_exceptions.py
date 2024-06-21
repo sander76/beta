@@ -1,11 +1,16 @@
 from __future__ import annotations
 
+from typing import TYPE_CHECKING
+
 from pydantic import ValidationError
 from rich.console import Console, ConsoleOptions, RenderResult
 from rich.text import Text
 
 from clipstick import _tokens
 from clipstick._style import ARGUMENTS_STYLE
+
+if TYPE_CHECKING:
+    from clipstick.__intermediary import Arg
 
 
 class ClipStickError(Exception):
@@ -58,6 +63,13 @@ class InvalidUnion(InvalidModel):
     def __init__(self, *message: str | Text) -> None:
         super().__init__(
             "A union type can only contain 2 types of which one must be None (the default)"
+        )
+
+
+class OnlyOneTypeAllowedInCollection(InvalidModel):
+    def __init__(self, arg: Arg) -> _tokens.NoneType:
+        super().__init__(
+            f"A collection can only contain one type. {arg.key=}, {arg.type}"
         )
 
 

@@ -8,8 +8,14 @@ from pydantic import BaseModel
 
 import tests
 from tests import HELP_OUTPUT_FOLDER
+from tests.models import dataclass_models, pydantic_models
 
 TEST_FOLDER = Path(tests.__file__).parent
+
+
+@pytest.fixture(params=[dataclass_models, pydantic_models])
+def models(request):
+    return request.param
 
 
 class CapturedOutput:
